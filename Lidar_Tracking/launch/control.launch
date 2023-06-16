@@ -1,0 +1,39 @@
+<launch>
+
+   <arg name="location_" default="sim" />
+   
+ <node pkg="Marker_Tracking" type="Marker_Tracking" name="Marker_Tracking" output="screen">
+    <param name="max_lfd" value="1.7" type="double" />
+    <param name="min_lfd" value="0.3" type="double" />
+    <param name="num" value="70" type="int" />
+    <param name="path_param" value="0.4" type="double" />
+    <param name="avoid_mindist" value="0.5" type="double" />
+    <param name="avoid_objdist" value="1.5" type="double" />
+    <param name="dynamic_mindist" value="0.33" type="double" />
+    <param name="dynamic_objdist" value="1.9" type="double" />
+
+    <!--school-->
+    <!--<param name="UTM_OFFSET_X" value="362169.6526" type="double" />
+    <param name="UTM_OFFSET_Y" value="4054407.07" type="double" />-->
+
+    <!--ctrack-->
+    <!--<param name="UTM_OFFSET_X" value="361001.412425" type="double" />
+    <param name="UTM_OFFSET_Y" value="4065821.07176" type="double" />-->
+
+    <!--k-city-->
+    <!--<param name="UTM_OFFSET_X" value="302533.174487" type="double" />
+    <param name="UTM_OFFSET_Y" value="4124215.34631" type="double" />-->
+
+    <!--sim-->
+    <param name="UTM_OFFSET_X" value="0.0" type="double" />
+    <param name="UTM_OFFSET_Y" value="0.0" type="double" />
+
+ </node>
+ 
+ 
+ <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen">
+        <param name="port" value="/dev/ttyUSB1" />
+        <param name="baud" value="9600" />
+    </node>
+
+</launch>

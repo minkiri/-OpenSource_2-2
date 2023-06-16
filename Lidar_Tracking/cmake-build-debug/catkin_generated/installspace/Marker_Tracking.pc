@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: Marker_Tracking
+Description: Description of Marker_Tracking
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: ackermann_msgs geometry_msgs nav_msgs roscpp rospy std_msgs tf

@@ -1,0 +1,6 @@
+<launch>
+
+        <node pkg="tcp_package" type="tcp_client" name="tcp_platoon_publisher" output="screen" />     
+
+
+</launch>
